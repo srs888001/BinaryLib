@@ -38,6 +38,8 @@ TODO: Add long description of the pod here.
     require 'pathname'
     puts Pathname.new(__FILE__).realpath
     puts '-------------------------------------------------------------------'
+    puts File.dirname(__FILE__)
+    
     s.prepare_command = '/bin/bash ./build_lib.sh'
     s.source_files = 'Pod/Products/include/**'
     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'

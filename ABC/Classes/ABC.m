@@ -9,6 +9,6 @@
 
 @implementation ABC
 - (void)abc {
-    NSLog(@"abc");
+    NSLog(@"0.1.0.Binary");
 }
 @end

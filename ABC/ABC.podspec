@@ -34,6 +34,9 @@ TODO: Add long description of the pod here.
     
     puts '-------------------------------------------------------------------'
     puts 'Notice:ABC is binary now'
+    
+    require 'pathname'
+    puts Pathname.new(__FILE__).realpath
     puts '-------------------------------------------------------------------'
     s.prepare_command = '/bin/bash build_lib.sh'
     s.source_files = 'Pod/Products/include/**'

@@ -63,13 +63,13 @@ def git_commit(tag, commit_msg):
 
     git_push = 'git push origin'
     print(git_push)
-    res = os.system(git_push)
+    os.system(git_push)
+    
+    git_tag = 'git tag %s'%tag
+    print(git_tag)
+    res = os.system(git_tag)
+    os.system('git push origin --tags')
     return res
-    # git_tag = 'git tag %s'%tag
-    # print(git_tag)
-    # os.system(git_tag)
-    # os.system('git push origin --tags')
-
     
 # File
 def find_whatsnew_from_ini(file_path,tag):

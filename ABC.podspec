@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.1.0'
+  s.version          = '0.1.0.Binary'
   s.summary          = 'A short description of ABC.'
 
 # This description is used to generate tags and improve search results.
@@ -30,23 +30,23 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-#   if s.version.to_s.include?'Binary'
+  if s.version.to_s.include?'Binary'
+    puts '-------------------------------------------------------------------'
+    puts 'Notice:ABC is binary now'
+    puts '-------------------------------------------------------------------'
     
-#     puts '-------------------------------------------------------------------'
-#     puts 'Notice:ABC is binary now'
+    s.prepare_command = '/bin/bash ./build_lib.sh'
+    s.source_files = 'Pod/Products/include/**'
+    s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
+    s.public_header_files = 'Pod/Products/include/*.h'
     
-#     require 'pathname'
-#     puts Pathname.new(__FILE__).realpath
-#     puts '-------------------------------------------------------------------'
-#     puts File.dirname(__FILE__)
-    
-#     s.prepare_command = '/bin/bash ./build_lib.sh'
-#     s.source_files = 'Pod/Products/include/**'
-#     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
-#     s.public_header_files = 'Pod/Products/include/*.h'    
-# else
+else
+    puts '-------------------------------------------------------------------'
+    puts 'Notice:ABC is source code now'
+    puts '-------------------------------------------------------------------'
+
     s.source_files = 'ABC/Classes/**/*'
-# end
+end
 
   # s.resource_bundles = {
   #   'ABC' => ['ABC/Assets/*.png']

@@ -63,9 +63,9 @@ def git_commit(tag, commit_msg):
     print(git_commit)
     os.system(git_commit)
 
-    git_fetch = "git fetch origin master"
-    print(git_fetch)
-    os.system(git_fetch)
+    git_checkout = "git checkout remote master"
+    print(git_checkout)
+    os.system(git_checkout)
 
     git_push = 'git push origin'
     print(git_push)

@@ -63,7 +63,7 @@ def git_commit(tag, commit_msg):
     print(git_commit)
     os.system(git_commit)
 
-    git_checkout = "git checkout remote master"
+    git_checkout = "git checkout master"
     print(git_checkout)
     os.system(git_checkout)
 

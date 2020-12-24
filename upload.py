@@ -66,7 +66,10 @@ def git_commit(tag, commit_msg):
     git_checkout = "git checkout master"
     print(git_checkout)
     os.system(git_checkout)
-
+    git_pull = "git pull"
+    print(git_pull)
+    os.system(git_pull)
+    
     git_push = 'git push origin'
     print(git_push)
     os.system(git_push)

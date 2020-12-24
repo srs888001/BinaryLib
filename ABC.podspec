@@ -39,6 +39,11 @@ TODO: Add long description of the pod here.
     s.source_files = 'Pod/Products/include/**'
     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
     s.public_header_files = 'Pod/Products/include/*.h'
+
+    s.pod_target_xcconfig = {
+      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     
 else
     puts '-------------------------------------------------------------------'

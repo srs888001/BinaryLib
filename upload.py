@@ -63,6 +63,10 @@ def git_commit(tag, commit_msg):
     print(git_commit)
     os.system(git_commit)
 
+    git_fetch = "git fetch origin master"
+    print(git_fetch)
+    os.system(git_fetch)
+
     git_push = 'git push origin'
     print(git_push)
     os.system(git_push)
@@ -82,8 +86,6 @@ def delete_tag(tag):
     git_push = 'git push origin :refs/tags/%s'%tag
     print(git_push)
     os.system(git_push)
-
-    os.system('git delete origin --tags')
 
 # File
 def find_whatsnew_from_ini(file_path,tag):

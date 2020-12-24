@@ -17,6 +17,8 @@ def run():
     res = lint_push_podspec(spec_name,specs_name,source_specs_url)
     if res == 0:
         update_local_specs(specs_name)
+    else :
+        delete_tag(tag)
 
 # Update local specs
 def update_local_specs(specs_name):
@@ -71,6 +73,18 @@ def git_commit(tag, commit_msg):
     os.system('git push origin --tags')
     return res
     
+# deleteTag
+def delete_tag(tag):
+    git_tag = 'git tag -d %s'%tag
+    print(git_tag)
+    os.system(git_tag)
+
+    git_push = 'git push origin :refs/tags/%s'%tag
+    print(git_push)
+    os.system(git_push)
+
+    os.system('git delete origin --tags')
+
 # File
 def find_whatsnew_from_ini(file_path,tag):
     if '.Binary' in tag:

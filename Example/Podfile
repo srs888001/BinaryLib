@@ -8,6 +8,5 @@ target 'ABC_Example' do
   target 'ABC_Tests' do
     inherit! :search_paths
 
-    
   end
 end

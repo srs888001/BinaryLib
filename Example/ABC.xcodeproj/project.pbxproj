@@ -26,6 +26,11 @@
 		780FCB3925933A0400A0E3A9 /* placeholder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 780FCB3625933A0400A0E3A9 /* placeholder.h */; };
 		780FCB4C25933A6400A0E3A9 /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = 780FCB4A25933A6400A0E3A9 /* ABC.m */; };
 		780FCB4D25933A6400A0E3A9 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 780FCB4B25933A6400A0E3A9 /* ABC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780FCC152594A08D00A0E3A9 /* ABCFreamWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 780FCC132594A08D00A0E3A9 /* ABCFreamWork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780FCC182594A08D00A0E3A9 /* ABCFreamWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780FCC112594A08C00A0E3A9 /* ABCFreamWork.framework */; };
+		780FCC192594A08D00A0E3A9 /* ABCFreamWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 780FCC112594A08C00A0E3A9 /* ABCFreamWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		780FCC262594A0CE00A0E3A9 /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = 780FCC242594A0CE00A0E3A9 /* ABC.m */; };
+		780FCC272594A0CE00A0E3A9 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 780FCC252594A0CE00A0E3A9 /* ABC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +41,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = ABC;
+		};
+		780FCC162594A08D00A0E3A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 780FCC102594A08C00A0E3A9;
+			remoteInfo = ABCFreamWork;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,6 +60,17 @@
 			files = (
 				780FCB3925933A0400A0E3A9 /* placeholder.h in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780FCC1A2594A08D00A0E3A9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				780FCC192594A08D00A0E3A9 /* ABCFreamWork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -82,6 +105,11 @@
 		780FCB3625933A0400A0E3A9 /* placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = placeholder.h; sourceTree = "<group>"; };
 		780FCB4A25933A6400A0E3A9 /* ABC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABC.m; path = ../../ABC/Classes/ABC.m; sourceTree = "<group>"; };
 		780FCB4B25933A6400A0E3A9 /* ABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABC.h; path = ../../ABC/Classes/ABC.h; sourceTree = "<group>"; };
+		780FCC112594A08C00A0E3A9 /* ABCFreamWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABCFreamWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		780FCC132594A08D00A0E3A9 /* ABCFreamWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCFreamWork.h; sourceTree = "<group>"; };
+		780FCC142594A08D00A0E3A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		780FCC242594A0CE00A0E3A9 /* ABC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABC.m; path = ../../ABC/Classes/ABC.m; sourceTree = "<group>"; };
+		780FCC252594A0CE00A0E3A9 /* ABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABC.h; path = ../../ABC/Classes/ABC.h; sourceTree = "<group>"; };
 		7F409C5D054D0F2F52A7BC13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8209007F2220E260E5CE3AEF /* Pods-ABC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC_Tests.release.xcconfig"; path = "Target Support Files/Pods-ABC_Tests/Pods-ABC_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +126,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				47311626E494E3514BBD3D0B /* Pods_ABC_Example.framework in Frameworks */,
+				780FCC182594A08D00A0E3A9 /* ABCFreamWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +142,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		780FCB3125933A0400A0E3A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780FCC0E2594A08C00A0E3A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,6 +176,7 @@
 				6003F593195388D20070C39A /* Example for ABC */,
 				6003F5B5195388D20070C39A /* Tests */,
 				780FCB3525933A0400A0E3A9 /* ABCBinary */,
+				780FCC122594A08C00A0E3A9 /* ABCFreamWork */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				46199840F687F64715D6DF31 /* Pods */,
@@ -152,6 +189,7 @@
 				6003F58A195388D20070C39A /* ABC_Example.app */,
 				6003F5AE195388D20070C39A /* ABC_Tests.xctest */,
 				780FCB3425933A0400A0E3A9 /* libABCBinary.a */,
+				780FCC112594A08C00A0E3A9 /* ABCFreamWork.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,6 +273,17 @@
 			path = ABCBinary;
 			sourceTree = "<group>";
 		};
+		780FCC122594A08C00A0E3A9 /* ABCFreamWork */ = {
+			isa = PBXGroup;
+			children = (
+				780FCC252594A0CE00A0E3A9 /* ABC.h */,
+				780FCC242594A0CE00A0E3A9 /* ABC.m */,
+				780FCC132594A08D00A0E3A9 /* ABCFreamWork.h */,
+				780FCC142594A08D00A0E3A9 /* Info.plist */,
+			);
+			path = ABCFreamWork;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -243,6 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				780FCB4D25933A6400A0E3A9 /* ABC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780FCC0C2594A08C00A0E3A9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780FCC152594A08D00A0E3A9 /* ABCFreamWork.h in Headers */,
+				780FCC272594A0CE00A0E3A9 /* ABC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +315,12 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				780FCC1A2594A08D00A0E3A9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				780FCC172594A08D00A0E3A9 /* PBXTargetDependency */,
 			);
 			name = ABC_Example;
 			productName = ABC;
@@ -304,6 +364,24 @@
 			productReference = 780FCB3425933A0400A0E3A9 /* libABCBinary.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		780FCC102594A08C00A0E3A9 /* ABCFreamWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 780FCC1D2594A08D00A0E3A9 /* Build configuration list for PBXNativeTarget "ABCFreamWork" */;
+			buildPhases = (
+				780FCC0C2594A08C00A0E3A9 /* Headers */,
+				780FCC0D2594A08C00A0E3A9 /* Sources */,
+				780FCC0E2594A08C00A0E3A9 /* Frameworks */,
+				780FCC0F2594A08C00A0E3A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ABCFreamWork;
+			productName = ABCFreamWork;
+			productReference = 780FCC112594A08C00A0E3A9 /* ABCFreamWork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -318,6 +396,10 @@
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 					780FCB3325933A0400A0E3A9 = {
+						CreatedOnToolsVersion = 12.2;
+						ProvisioningStyle = Automatic;
+					};
+					780FCC102594A08C00A0E3A9 = {
 						CreatedOnToolsVersion = 12.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -340,6 +422,7 @@
 				6003F589195388D20070C39A /* ABC_Example */,
 				6003F5AD195388D20070C39A /* ABC_Tests */,
 				780FCB3325933A0400A0E3A9 /* ABCBinary */,
+				780FCC102594A08C00A0E3A9 /* ABCFreamWork */,
 			);
 		};
 /* End PBXProject section */
@@ -361,6 +444,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780FCC0F2594A08C00A0E3A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +530,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		780FCC0D2594A08C00A0E3A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780FCC262594A0CE00A0E3A9 /* ABC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -447,6 +545,11 @@
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* ABC_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+		780FCC172594A08D00A0E3A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 780FCC102594A08C00A0E3A9 /* ABCFreamWork */;
+			targetProxy = 780FCC162594A08D00A0E3A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -559,6 +662,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ABC/ABC-Prefix.pch";
 				INFOPLIST_FILE = "ABC/ABC-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,6 +679,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ABC/ABC-Prefix.pch";
 				INFOPLIST_FILE = "ABC/ABC-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -653,7 +758,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -692,7 +796,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -702,6 +805,99 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		780FCC1B2594A08D00A0E3A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ABCFreamWork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.ABCFreamWork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		780FCC1C2594A08D00A0E3A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ABCFreamWork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.ABCFreamWork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -740,6 +936,15 @@
 			buildConfigurations = (
 				780FCB3A25933A0400A0E3A9 /* Debug */,
 				780FCB3B25933A0400A0E3A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		780FCC1D2594A08D00A0E3A9 /* Build configuration list for PBXNativeTarget "ABCFreamWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780FCC1B2594A08D00A0E3A9 /* Debug */,
+				780FCC1C2594A08D00A0E3A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

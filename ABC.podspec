@@ -52,7 +52,7 @@ TODO: Add long description of the pod here.
     puts 'Notice:ABC is freamWork now'
     puts '-------------------------------------------------------------------'
     
-    s.prepare_command = '/bin/bash ./build_lib.sh'
+    s.prepare_command = '/bin/bash ./build_freamwork.sh'
     s.vendored_framework = 'Pod/Products/*.framework'
 
     s.pod_target_xcconfig = {

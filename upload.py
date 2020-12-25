@@ -94,9 +94,11 @@ def delete_tag(tag):
 def find_whatsnew_from_ini(file_path,tag):
     if '.Binary' in tag:
         tag = tag.replace('.Binary','')
+    elif '.Freamwork' in tag:
+        tag = tag.replace('.Freamwork','')
     cf = configparser.ConfigParser()
     cf.read(file_path,encoding='utf-8')
-
+    print('tag:',tag)
     whats_new = cf.get("v%s"%tag,"whats_new")
     if len(whats_new) == 0:
         whats_new = 'ready to push %s'%tag
@@ -108,6 +110,7 @@ def find_podspec_tag(file_path):
     with open(file_path, 'r') as f:
         contents = f.read().replace('\n', '').replace('\r', '').replace(' ', '')
         version = findContentInMiddle(contents, "s.version='", "'s")
+        version = findContentInMiddle(contents, "s.version='", "'#s.")
         print('find podspec version %s from %s' % (version, file_path))
         return version
 

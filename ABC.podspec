@@ -8,7 +8,9 @@
 #use tag
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.1.4.Binary'
+  s.version          = '0.1.4.Freamwork'
+  #s.version          = '0.1.4.Binary'
+  #s.version          = '0.1.4'
   s.summary          = 'A short description of ABC.'
 
 # This description is used to generate tags and improve search results.
@@ -39,13 +41,26 @@ TODO: Add long description of the pod here.
     s.source_files = 'Pod/Products/include/**'
     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
     s.public_header_files = 'Pod/Products/include/*.h'
-
+  
     s.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
     }
     s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     
-else
+  elsif s.version.to_s.include?'Freamwork'
+    puts '-------------------------------------------------------------------'
+    puts 'Notice:ABC is freamWork now'
+    puts '-------------------------------------------------------------------'
+    
+    s.prepare_command = '/bin/bash ./build_lib.sh'
+    s.vendored_framework = 'Pod/Products/*.framework'
+
+    s.pod_target_xcconfig = {
+      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
+  else
     puts '-------------------------------------------------------------------'
     puts 'Notice:ABC is source code now'
     puts '-------------------------------------------------------------------'

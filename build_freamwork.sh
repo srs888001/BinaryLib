@@ -7,6 +7,7 @@ BINARY_NAME="${PROJECT_NAME}FreamWork"
 cd Example
 
 INSTALL_DIR=$PWD/../Pod/Products
+
 WRK_DIR=build
 
 BUILD_PATH=${WRK_DIR}
@@ -27,12 +28,15 @@ rm -rf "${INSTALL_DIR}"
 fi
 mkdir -p "${INSTALL_DIR}"
 
-cp -R "${DEVICE_DIR}/" "${INSTALL_DIR}/"
+INSTALL_LIB_DIR=${INSTALL_DIR}/${BINARY_NAME}.framework
+mkdir -p "${INSTALL_LIB_DIR}"
+
+cp -rp "${DEVICE_DIR}/" "${INSTALL_LIB_DIR}/"
 
 # Objective-C framework 中, 使用 lipo 合成 iphoneos 和 iphonesimulator 可执行文件后, .framework 即可正常工作, 不过在合成 Swift framework 后, 使用 .framework 会出现错误:
 # 'SomeClass' is unavailable: cannot find Swift declaration for this class
 # 这是因为 Swift framework 内包含有 .swiftmodule 文件, 其定义了 framework 所支持的 architecture, 所以对于 Swift framework, 我们除了将 .exec 文件合并外, 还需要将 .framework/Module/.swiftmodule 文件夹内的所有描述文件移动到一起:
-#cp -R "${SIMULATOR_DIR}/Modules/${PROJECT_NAME}.swiftmodule/." "${INSTALL_DIR}/Modules/${PROJECT_NAME}.swiftmodule/"
+#cp -rp "${SIMULATOR_DIR}/Modules/${PROJECT_NAME}.swiftmodule/." "${INSTALL_LIB_DIR}/Modules/${PROJECT_NAME}.swiftmodule/"
 
-lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "${SIMULATOR_DIR}/${BINARY_NAME}" -output "${INSTALL_DIR}/${BINARY_NAME}"
+lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "${SIMULATOR_DIR}/${BINARY_NAME}" -output "${INSTALL_LIB_DIR}/${BINARY_NAME}"
 rm -r "${WRK_DIR}"

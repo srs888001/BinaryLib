@@ -8,7 +8,7 @@
 #use tag
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.1.4.Freamwork'
+  s.version          = '0.1.5'
   #s.version          = '0.1.4.Binary'
   #s.version          = '0.1.4'
   s.summary          = 'A short description of ABC.'
@@ -28,45 +28,71 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '603722906@qq.com' => 'sirusheng@agora.io' }
   s.source           = { :git => 'https://github.com/srs888001/BinaryLib.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
 
-  if s.version.to_s.include?'Binary'
-    puts '-------------------------------------------------------------------'
-    puts 'Notice:ABC is binary now'
-    puts '-------------------------------------------------------------------'
-    
-    s.prepare_command = '/bin/bash ./build_lib.sh'
-    s.source_files = 'Pod/Products/include/**'
-    s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
-    s.public_header_files = 'Pod/Products/include/*.h'
+  s.subspec 'Binary' do |sb|
+    sb.s.prepare_command = '/bin/bash ./build_lib.sh'
+    sb.s.source_files = 'Pod/Products/include/**'
+    sb.s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
+    sb.s.public_header_files = 'Pod/Products/include/*.h'
   
-    s.pod_target_xcconfig = {
+    sb.s.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
     }
-    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    
-  elsif s.version.to_s.include?'Freamwork'
-    puts '-------------------------------------------------------------------'
-    puts 'Notice:ABC is freamWork now'
-    puts '-------------------------------------------------------------------'
-    
-    s.prepare_command = '/bin/bash ./build_freamwork.sh'
-    s.vendored_framework = 'Pod/Products/*.framework'
+    sb.s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
-    s.pod_target_xcconfig = {
+  end
+  s.subspec 'Framework' do |sf|
+    sf.s.vendored_framework = 'BAPurchase/Frameworks/BAPurchase.framework'
+    sf.s.prepare_command = '/bin/bash ./build_freamwork.sh'
+    sf.s.vendored_framework = 'Pod/Products/*.framework'
+
+    sf.s.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
     }
-    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    sf.s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  end
+  s.subspec 'Core' do |sc|
+    sc.source_files = 'ABC/Classes/**/*'
+  end
+  s.default_subspecs = 'Framework'
 
-  else
-    puts '-------------------------------------------------------------------'
-    puts 'Notice:ABC is source code now'
-    puts '-------------------------------------------------------------------'
+#   if s.version.to_s.include?'Binary'
+#     puts '-------------------------------------------------------------------'
+#     puts 'Notice:ABC is binary now'
+#     puts '-------------------------------------------------------------------'
+    
+#     s.prepare_command = '/bin/bash ./build_lib.sh'
+#     s.source_files = 'Pod/Products/include/**'
+#     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
+#     s.public_header_files = 'Pod/Products/include/*.h'
+  
+#     s.pod_target_xcconfig = {
+#       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+#     }
+#     s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    
+#   elsif s.version.to_s.include?'Freamwork'
+#     puts '-------------------------------------------------------------------'
+#     puts 'Notice:ABC is freamWork now'
+#     puts '-------------------------------------------------------------------'
+    
+#     s.prepare_command = '/bin/bash ./build_freamwork.sh'
+#     s.vendored_framework = 'Pod/Products/*.framework'
 
-    s.source_files = 'ABC/Classes/**/*'
-end
+#     s.pod_target_xcconfig = {
+#       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+#     }
+#     s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
+#   else
+#     puts '-------------------------------------------------------------------'
+#     puts 'Notice:ABC is source code now'
+#     puts '-------------------------------------------------------------------'
+
+#     s.source_files = 'ABC/Classes/**/*'
+# end
 
   # s.resource_bundles = {
   #   'ABC' => ['ABC/Assets/*.png']

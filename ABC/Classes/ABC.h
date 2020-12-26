@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ABC : NSObject
 
+- (void)test:(NSString *)params;
+
 @end
 
 NS_ASSUME_NONNULL_END

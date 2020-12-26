@@ -8,5 +8,7 @@
 #import "ABC.h"
 
 @implementation ABC
-
+- (void)test:(NSString *)params {
+    NSLog(@"ABC:%@", params);
+}
 @end

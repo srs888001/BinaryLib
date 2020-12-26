@@ -1,9 +1,9 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'ABC_Example' do
-  pod 'ABC', :path => '../'
+  pod 'ABC', :path => '../', :subspecs => ['Binary']
 
   target 'ABC_Tests' do
     inherit! :search_paths

@@ -31,31 +31,32 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.subspec 'Binary' do |sb|
-    sb.s.prepare_command = '/bin/bash ./build_lib.sh'
-    sb.s.source_files = 'Pod/Products/include/**'
-    sb.s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
-    sb.s.public_header_files = 'Pod/Products/include/*.h'
+  # s.prepare_command = '/bin/bash ./build_lib.sh'
+  s.prepare_command = '/bin/bash ./build_freamwork.sh'
   
-    sb.s.pod_target_xcconfig = {
-      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-    }
-    sb.s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-
-  end
+  # s.subspec 'Binary' do |sb|
+  #   sb.source_files = 'Pod/Products/include/**'
+  #   sb.ios.vendored_libraries = 'Pod/Products/lib/*.a'
+  #   sb.public_header_files = 'Pod/Products/include/*.h'
+  
+  #   sb.pod_target_xcconfig = {
+  #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  #   }
+  #   sb.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # end
   s.subspec 'Framework' do |sf|
-    sf.s.vendored_framework = 'BAPurchase/Frameworks/BAPurchase.framework'
-    sf.s.prepare_command = '/bin/bash ./build_freamwork.sh'
-    sf.s.vendored_framework = 'Pod/Products/*.framework'
+    sf.vendored_framework = 'BAPurchase/Frameworks/BAPurchase.framework'
+    sf.vendored_framework = 'Pod/Products/*.framework'
 
-    sf.s.pod_target_xcconfig = {
+    sf.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
     }
-    sf.s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    sf.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   end
   s.subspec 'Core' do |sc|
     sc.source_files = 'ABC/Classes/**/*'
   end
+
   s.default_subspecs = 'Framework'
 
 #   if s.version.to_s.include?'Binary'

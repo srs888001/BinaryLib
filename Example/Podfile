@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '10.0'
 
 target 'ABC_Example' do
-  pod 'ABC', :path => '../', :subspecs => ['Binary']
+  pod 'ABC', :path => '../'#, :subspecs => ['Core']
 
   target 'ABC_Tests' do
     inherit! :search_paths

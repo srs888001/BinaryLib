@@ -8,7 +8,7 @@
 #use tag
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   #s.version          = '0.1.4.Binary'
   #s.version          = '0.1.4'
   s.summary          = 'A short description of ABC.'
@@ -45,7 +45,6 @@ TODO: Add long description of the pod here.
   #   sb.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   # end
   s.subspec 'Framework' do |sf|
-    sf.vendored_framework = 'BAPurchase/Frameworks/BAPurchase.framework'
     sf.vendored_framework = 'Pod/Products/*.framework'
 
     sf.pod_target_xcconfig = {

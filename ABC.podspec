@@ -8,7 +8,7 @@
 #use tag
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7.Binary'
   #s.version          = '0.1.4.Binary'
   #s.version          = '0.1.4'
   s.summary          = 'A short description of ABC.'
@@ -31,32 +31,32 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  # s.prepare_command = '/bin/bash ./build_lib.sh'
-  s.prepare_command = '/bin/bash ./build_freamwork.sh'
+  s.prepare_command = '/bin/bash ./build_lib.sh'
+  # s.prepare_command = '/bin/bash ./build_freamwork.sh'
   
-  # s.subspec 'Binary' do |sb|
-  #   sb.source_files = 'Pod/Products/include/**'
-  #   sb.ios.vendored_libraries = 'Pod/Products/lib/*.a'
-  #   sb.public_header_files = 'Pod/Products/include/*.h'
+  s.subspec 'Binary' do |sb|
+    sb.source_files = 'Pod/Products/include/**'
+    sb.ios.vendored_libraries = 'Pod/Products/lib/*.a'
+    sb.public_header_files = 'Pod/Products/include/*.h'
   
-  #   sb.pod_target_xcconfig = {
-  #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  #   }
-  #   sb.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  # end
-  s.subspec 'Framework' do |sf|
-    sf.vendored_framework = 'Pod/Products/*.framework'
-
-    sf.pod_target_xcconfig = {
+    sb.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
     }
-    sf.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    sb.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   end
+  # s.subspec 'Framework' do |sf|
+  #   sf.vendored_framework = 'Pod/Products/*.framework'
+
+  #   sf.pod_target_xcconfig = {
+  #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  #   }
+  #   sf.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # end
   s.subspec 'Core' do |sc|
     sc.source_files = 'ABC/Classes/**/*'
   end
 
-  s.default_subspecs = 'Framework'
+  s.default_subspecs = 'Binary'
 
 #   if s.version.to_s.include?'Binary'
 #     puts '-------------------------------------------------------------------'

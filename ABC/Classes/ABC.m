@@ -10,5 +10,11 @@
 @implementation ABC
 - (void)test:(NSString *)params {
     NSLog(@"ABC:%@", params);
+    [self test1:params];
 }
+
+- (void)test1:(NSString *)params {
+    NSLog(@"test1 ABC:%@", params);
+}
+
 @end

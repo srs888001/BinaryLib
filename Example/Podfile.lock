@@ -1,7 +1,7 @@
 PODS:
-  - ABC (0.1.6):
-    - ABC/Framework (= 0.1.6)
-  - ABC/Framework (0.1.6)
+  - ABC (0.1.7.Binary):
+    - ABC/Binary (= 0.1.7.Binary)
+  - ABC/Binary (0.1.7.Binary)
 
 DEPENDENCIES:
   - ABC (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ABC: 55a6f62ec16b1b7b22dfe4b8afffa9bd1947c0c6
+  ABC: 3824093e5b2ad2372812b7b6e2903f1a9e4c6f0f
 
 PODFILE CHECKSUM: 362039fb2ebe740d73b4e2ff2ae03d4ceea3b1a4
 
